@@ -1,0 +1,44 @@
+@import "bootstrap";
+
+/* universsal */
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+}
+
+
+/* sidebar */
+
+p.sidebar {
+    padding-top: 15px;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+  a {
+    color: $gray;
+    &:hover {
+      color: #555;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+      font-size: 8px;
+    }
+  }
+}
