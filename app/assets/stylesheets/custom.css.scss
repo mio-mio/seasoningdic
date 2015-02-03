@@ -1,19 +1,29 @@
 @import "bootstrap";
 
 /* universsal */
+.col-md-9 {
+  margin-bottom: 50px;
+}
+/*
+button.wasabi {
+  btn-success;
+}
+*/
+
+/* sidebar */
 
 /* header */
 
 #logo {
   float: left;
-  margin-right: 10px;
+  margin: 0px 10px 10px 0px;
 }
 
 
 /* sidebar */
 
 p.sidebar {
-    padding-top: 15px;
+    margin-top: 25px;
 }
 
 /* footer */
