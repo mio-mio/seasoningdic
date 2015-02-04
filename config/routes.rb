@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
+  
+  
+  root  'static_pages#home'
+  # get 'static_pages/home'
+  
+  match '/fav',    to: 'static_pages#fav',    via: 'get'
+  match '/limit',    to: 'static_pages#limit',    via: 'get'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

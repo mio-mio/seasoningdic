@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  seasoning_category_id: 1
+  cook_time: 1
+  yield: 1
+
+two:
+  title: MyString
+  seasoning_category_id: 1
+  cook_time: 1
+  yield: 1
