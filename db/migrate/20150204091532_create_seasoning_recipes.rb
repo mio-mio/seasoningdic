@@ -4,7 +4,7 @@ class CreateSeasoningRecipes < ActiveRecord::Migration
       t.string :title
       t.integer :seasoning_category_id
       t.integer :cook_time
-      t.integer :yield
+      t.integer :serving
 
       t.timestamps
     end

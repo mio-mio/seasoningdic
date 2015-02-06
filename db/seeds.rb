@@ -5,3 +5,22 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+require "csv"
+
+SeasoningRecipe.delete_all
+
+SeasoningRecipe.connection.execute("delete from sqlite_sequence where name='seasoning_recipes'") 
+
+CSV.foreach('db/seasoning_recipe_sample.csv') do |row|
+  p SeasoningRecipe.create(:title => row[0], :seasoning_category_id => row[1].to_i, :cook_time => row[2].to_i, :serving => row[3].to_i)
+end
+
+
+SeasoningCategory.delete_all
+
+SeasoningCategory.connection.execute("delete from sqlite_sequence where name='seasoning_categories'") 
+
+CSV.foreach('db/seasoning_category_sample.csv') do |row|
+  p SeasoningCategory.create(:title => row[0])
+end

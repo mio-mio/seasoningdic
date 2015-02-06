@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20150204091616) do
     t.string   "title"
     t.integer  "seasoning_category_id"
     t.integer  "cook_time"
-    t.integer  "yield"
+    t.integer  "serving"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
