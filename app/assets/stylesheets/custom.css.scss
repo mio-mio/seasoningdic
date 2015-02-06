@@ -4,11 +4,23 @@
 .col-md-9 {
   margin-bottom: 50px;
 }
-/*
-button.wasabi {
-  btn-success;
+
+#search_button{
+  text-align:center;
 }
-*/
+
+span.search_button {
+  margin-right: 30px;
+}
+
+a:link { color: blue; }
+a:visited { color: purple; }
+a:hover { color: red; }
+a:active { color: yellow; }
+
+h3 {
+  background-color: #f7f6eb;
+}
 
 /* sidebar */
 
@@ -19,10 +31,19 @@ button.wasabi {
   margin: 0px 10px 10px 0px;
 }
 
+.navbar-default {
+  background-color:	#f6fbf6; 
+}
+
+/*
+li.active {
+  background-color:	#f7f6eb; 
+}
+*/
 
 /* sidebar */
 
-p.sidebar {
+p.sidebar{
     margin-top: 25px;
 }
 
