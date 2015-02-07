@@ -1,28 +1,23 @@
 <% provide(:title, 'オーブンの温度を°Fにしたい！') %>
 <!--
-<script type="text/javascript" src="test.js"></script>
+<script type="text/javascript" src="oven_temp.js"></script>
 -->
 
 <h2>オーブンの温度を°Fにしたい！</h2>
 
 <p>キッチンでオーブンを借りようとして、ふいに手が止まる瞬間。それはオーブンの設定温度を華氏(°F)で設定しないとならない時です。<br>
-天気予報で報じられる気温は日本と同じ摂氏（°C）なのに、オーブンは華氏なんてこともあるそうです。<br>
+天気予報で報じられる気温は日本と同じ摂氏（°C）なのに、オーブンは華氏なんて地域もあります。<br>
 日本で使い慣れている摂氏から、華氏に簡単に計算できる自動計算機を用意しました。<br>
 </p>
 
 
-<!-- <select id="cb">
-<option value="0">小数第一位を四捨五入</option>
-<option value="1">小数第二位を四捨五入</option>
-<option value="2">小数第三位を四捨五入</option>
-<option value="3">小数第四位を四捨五入</option>
-</select>&nbsp;-->
-
+<div>
 <p align="center">
-<input size="10" value="0" id="c_txt">°C&nbsp;
+摂氏<input size="10" value="0" id="c_txt">°C&nbsp;
 <input type="button" value="--変 換→" id="btn" class="btn btn-success">&nbsp;
-<input readOnly size="10" id="f_txt">°F
+華氏<input readOnly size="10" id="f_txt">°F
 </p>
+</div>
 
 <p>
 なお、製品によっては摂氏と華氏の切り替えができるものもあるそうです。一度設定を確認してみてもよいかもしれません。    

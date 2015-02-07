@@ -1,3 +1,6 @@
+//<meta content="text/html; charset=shift_jis">
+//<script type="text/javascript"><!--
+
 //関数 sessiToKasi の定義
 function sessiToKasi(ondo){
     //摂氏温度を受け取って華氏温度を返す
@@ -17,27 +20,20 @@ function showKasi(){
         document.getElementById("f_txt").value = "";
         //この関数を抜ける
         return false;
-    //もし kasi が -459.67 未満であれば
-    }else if(kasi < -459.67){
-        //メッセージを表示
-        alert("絶対0度以上を入力してください。");
-        document.getElementById("f_txt").value = "";
-        //この関数を抜ける
-        return false;
     }
     //select「cb」の selectedIndex の値を得る
-    var cb_n = document.getElementById("cb").selectedIndex;
+   // var cb_n = document.getElementById("cb").selectedIndex;
     //kasi の値を『10の「cb.selectedIndex」乗』倍する
-    kasi *= Math.pow(10, cb_n);
+    //kasi *= Math.pow(10, cb_n);
     //kasi の小数点以下を丸める
     kasi = Math.round(kasi);
     //もし 「cb.selectedIndex」が 0 以外であれば
-    if(cb_n){
+    //if(cb_n){
         //kasi の値を文字列化する
-        kasi = kasi.toString();
+      //  kasi = kasi.toString();
         //kasi に小数点を入れる
-        kasi = kasi.substr(0, kasi.length-cb_n) + "." + kasi.substr(-cb_n,cb_n);
-    }
+     //   kasi = kasi.substr(0, kasi.length-cb_n) + "." + kasi.substr(-cb_n,cb_n);
+ //   }
     //華氏用テキストフィールドに kasi を表示
     document.getElementById("f_txt").value = kasi;
 }

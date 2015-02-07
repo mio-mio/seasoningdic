@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   match '/fav',    to: 'static_pages#fav',    via: 'get'
   match '/limit',    to: 'static_pages#limit',    via: 'get'
   match '/oven_temp',    to: 'static_pages#oven_temp',    via: 'get'
+  match '/oven_temp_e',    to: 'static_pages#oven_temp_e',    via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
