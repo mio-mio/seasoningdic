@@ -36,9 +36,11 @@ function showKasi(){
  //   }
     //華氏用テキストフィールドに kasi を表示
     document.getElementById("f_txt").value = kasi;
+    
+
 }
 
-//ページロード時に実行
+    //ページロード時に実行
 window.onload = function(){
     //「btn」クリック時に関数 showKasi を実行
     document.getElementById("btn").onclick = showKasi;

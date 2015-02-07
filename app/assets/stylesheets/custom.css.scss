@@ -6,7 +6,7 @@
 }
 
 #search_button{
-  text-align:center;
+  text-align: center;
 }
 
 span.search_button {
@@ -22,6 +22,48 @@ h3 {
   background-color: #f7f6eb;
 }
 
+
+table#oven_temp_ex {
+  margin: 0px;
+	border: 1px dashed #999;
+	border-right-width: 0px;
+}
+
+table#oven_temp_ex tr th {
+	background-color: #392D2A;
+		padding: 4px;
+	color: white;
+	width: 40px;
+	text-align: center;
+	font-weight: bold;
+}
+
+table#oven_temp_ex tr th.fdo {
+	border-right: 1px solid #999;
+}
+
+table#oven_temp_ex tr td.cdo {
+	background-color:	#FAFAD2;
+	color: #392D2A;
+	padding: 4px;
+	width: 40px;
+	text-align: center;
+	font-weight: bold;
+}
+
+table#oven_temp_ex tr td.fdo {
+	background-color: #FFE6D9;
+	color: #392D2A;
+	padding: 4px;
+	width: 40px;
+	text-align: center;
+	font-weight: bold;
+	border-right: 1px solid #999;
+}
+
+table#oven_temp_ex tr td.table-center {
+	border-right: 1px dashed #564456;
+ }
 /* sidebar */
 
 /* header */
@@ -32,7 +74,7 @@ h3 {
 }
 
 .navbar-default {
-  background-color:	#f6fbf6; 
+  background-color:	#FAFAD2; 
 }
 
 /*
