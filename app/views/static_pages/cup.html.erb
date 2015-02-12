@@ -10,25 +10,102 @@
 海外のレシピを見て料理するときには、どの国のレシピなのかも意識する必要があるようです。<br>
 ここではアメリカでの換算をご紹介します。
 </p>
+    
+<script>
+function calc(ptn) { 
+	var value1 = parseInt(document.getElementById('value-1').value); 
+	var value2 = parseInt(document.getElementById('value-2').value); 
+	var total;
+	var strtitle;
+	if(ptn == 1){
+		strtitle = "足し算の計算結果は";
+		total = value1 + value2; 
+	}
+	else if(ptn == 2){
+		strtitle = "引き算の計算結果は";
+		total = value1 - value2; 
+	}
+	else if(ptn == 3){
+		strtitle = "掛け算の計算結果は";
+		total = value1 * value2; 
+	}
+	else if(ptn == 4){
+		strtitle = "割り算の計算結果は";
+		total = value1 / value2; 
+	}
+	alert(strtitle + total); 
+}
+</script> 
+
+<label for="value-1">値1</label>
+<input type="number" id="value-1" />
+<label for="value-2">値2</label>
+<input type="number" id="value-2" />
+<input type="button" value="足し算" onclick="calc(1)" />
+<input type="button" value="引き算" onclick="calc(2)" />
+<input type="button" value="掛け算" onclick="calc(3)" />
+<input type="button" value="割り算" onclick="calc(4)" />
+
+
+<p>
+<script>
+
+function thkw(){
+    
+    $sum = calc(1);    //足し算の計算結果を格納
+    $sub = calc(2);    //引き算算の計算結果を格納
+    $mul = calc(3);    //掛け算の計算結果を格納
+    $div = calc(4);    //割り算の計算結果を格納
+    
+    alert($sum+"\n"+$sub+"\n"+$mul+"\n"+$div);
+    
+}
+function calc(ptn) { 
+    var value1 = parseInt(document.getElementById('value-1').value); 
+    var value2 = parseInt(document.getElementById('value-2').value); 
+    var total;
+    var strtitle;
+    if(ptn == 1){
+        strtitle = "足し算の計算結果は";
+        total = value1 + value2; 
+    }
+    else if(ptn == 2){
+        strtitle = "引き算の計算結果は";
+        total = value1 - value2; 
+    }
+    else if(ptn == 3){
+        strtitle = "掛け算の計算結果は";
+        total = value1 * value2; 
+    }
+    else if(ptn == 4){
+        strtitle = "割り算の計算結果は";
+        total = value1 / value2; 
+    }
+    return strtitle + total;
+}
+</script> 
+<label for="value-1">値1</label>
+<input type="number" id="value-1" />
+<label for="value-2">値2</label>
+<input type="number" id="value-2" />
+<input type="button" value="四則演算" onclick="thkw()" />
+
+
+
+</p>
+
 
 <div>
-    
-<table class="table-striped table-bordered">
+    <table class="table-striped table-bordered">
        <tbody><tr>
         <th>
-<div class="dropdown">
-  <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdownで国選択！
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-    <li role="presentation" class="divider"></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-  </ul>
- </div> 
+ <select name="city_id" id="city_id">
+  <option value="1">アメリカ</option>
+  <option value="2">イギリス</option>
+  <option value="3">カナダ・オーストラリア</option>
+ </select>
+
+</div> 
   </th>
         <th>日本</th>
       </tr>

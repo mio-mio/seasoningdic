@@ -1,15 +1,22 @@
 Rails.application.routes.draw do
   
-  
+  get 'seasoning_category/index'
+
+  get 'seasoning_category/show'
+
   root  'static_pages#home'
-  # get 'static_pages/home'
+  
   
   match '/fav',    to: 'static_pages#fav',    via: 'get'
   match '/limit',    to: 'static_pages#limit',    via: 'get'
   match '/oven_temp',    to: 'static_pages#oven_temp',    via: 'get'
   match '/cup',    to: 'static_pages#cup',    via: 'get'
   match '/nuke',    to: 'static_pages#nuke',    via: 'get'
+#  match '/seasoning_categories',    to: 'static_pages#seasoning_categories',    via: 'get'
 
+
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
