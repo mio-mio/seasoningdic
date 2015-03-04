@@ -1,0 +1,2 @@
+module SeasoningCategoriesHelper
+end

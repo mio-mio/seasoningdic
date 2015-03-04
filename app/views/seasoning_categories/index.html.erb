@@ -1,0 +1,23 @@
+<h1>Listing seasoning_categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @seasoning_categories.each do |seasoning_category| %>
+      <tr>
+        <td><%= link_to 'Show', seasoning_category %></td>
+        <td><%= link_to 'Edit', edit_seasoning_category_path(seasoning_category) %></td>
+        <td><%= link_to 'Destroy', seasoning_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Seasoning category', new_seasoning_category_path %>
