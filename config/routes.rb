@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'seasoning_category/index'
+
+  get 'seasoning_category/show'
+
   root  'static_pages#home'
   
   
@@ -8,7 +12,7 @@ Rails.application.routes.draw do
   match '/oven_temp',    to: 'static_pages#oven_temp',    via: 'get'
   match '/cup',    to: 'static_pages#cup',    via: 'get'
   match '/nuke',    to: 'static_pages#nuke',    via: 'get'
-#  match '/seasoning_categories',    to: 'static_pages#seasoning_categories',    via: 'get'
+  match '/seasoning_categories',    to: 'static_pages#seasoning_categories',    via: 'get'
 
 
   
