@@ -1,0 +1,20 @@
+<% provide(:title, '調味料検索') %>
+
+<% unless @seasoning_recipes.empty? %>
+  <table>
+    <% @seasoning_recipes.each do |seasoning_recipe| %>
+      <tr>
+        <td>
+          <%= p seasoning_recipe.title %>
+        </td>
+        <td>
+          <%= p seasoning_recipe.cook_time %>
+        </td>
+        <td>
+          <%= p seasoning_recipe.serving %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+
