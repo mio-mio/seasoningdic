@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   match '/cup',    to: 'static_pages#cup',    via: 'get'
   match '/nuke',    to: 'static_pages#nuke',    via: 'get'
   match '/seasoning_recipes/category_search/:id', to:'seasoning_recipes#category_search', via: 'get', :as => 'seasoning_recipes_category_search'
-#  match '/seasoning_categories',    to: 'static_pages#seasoning_categories',    via: 'get'
 
   root  'static_pages#home'
   

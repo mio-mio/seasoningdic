@@ -1,6 +1,7 @@
 <% provide(:title, 'カテゴリ検索') %>
 
-
+料理名を選択してください<br><br>
 <% @seasoning_categories.each do |seasoning_category| %>
 <%= link_to seasoning_category.title, seasoning_recipes_category_search_path(id: seasoning_category.id) %>
+<%#= 何かを書いて、登録されているレシピ数を表示したい.count %><br>
 <% end %>

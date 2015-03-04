@@ -5,9 +5,9 @@ class SeasoningRecipesController < ApplicationController
 
   def show
   end
-  
+
   def category_search
-    @seasoning_recipes = SeasoningCategory.where("seasoning_category_id = ?", params[:id])
+    @seasoning_recipes = SeasoningCategory.where("seasoning_category_id = ?", params[:id].to_i)
     render :index
   end
 

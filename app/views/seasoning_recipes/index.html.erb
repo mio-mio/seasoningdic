@@ -5,13 +5,13 @@
     <% @seasoning_recipes.each do |seasoning_recipe| %>
       <tr>
         <td>
-          <%= p seasoning_recipe.title %>
+          <%= link_to seasoning_recipe.title, '#' %>&ensp;
         </td>
         <td>
-          <%= p seasoning_recipe.cook_time %>
+          所要時間<%= p seasoning_recipe.cook_time %>分&ensp;
         </td>
         <td>
-          <%= p seasoning_recipe.serving %>
+          <%= p seasoning_recipe.serving %>人分
         </td>
       </tr>
     <% end %>
