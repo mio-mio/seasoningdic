@@ -1,7 +1,38 @@
 <% provide(:title, 'ワット数が違う？！電子レンジの温め時間は') %>
 
+
 <div align="center">
-摂氏<input size="10" value="0" id="c_txt">°C&nbsp;
-<input type="button" value="--変 換→" id="btn" class="btn btn-success">&nbsp;
-華氏<input readOnly size="10" id="f_txt">°F
+<table class="table">
+    <tr>
+        <td>
+            <label for="moto_watt">記載されているワット数&nbsp;</label>
+            <input type="number" size="10" value="0" id="moto_watt" />W
+        </td>
+        <td>
+<label for="real_watt">手元の電子レンジのワット数&nbsp;</label>
+<input type="number" size="10" value="0" id="real_watt" />W
+        </td>
+    </tr>
+    <tr>
+       <td>
+           
+<label for="moto_time">記載されている加熱目安時間&nbsp;</label>
+<input type="number" size="10" value="0" id="moto_time" />秒
+        </td>
+        <td></td>
+            </tr>
+</table>
+<p>
+    
+<input type="button" value="加熱目安時間は" onClick="calc()" class="btn btn-success"/>
+
+</p>
+<p>
+    <label>
+        電子レンジ加熱目安時間&nbsp;：&nbsp;
+    </label>
+     <input readOnly size="10" id="real_time">秒
+</p>
+
+
 </div>

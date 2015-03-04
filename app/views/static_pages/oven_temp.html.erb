@@ -1,7 +1,4 @@
 <% provide(:title, 'オーブンの温度を°Fにしたい！') %>
-<!--
-<script type="text/javascript" src="/assets/oven_temp.js"></script>
--->
 
 <h2>オーブンの温度を°Fにしたい！</h2>
 
@@ -13,7 +10,7 @@
 
 <div align="center">
 摂氏<input size="10" value="0" id="c_txt">°C&nbsp;
-<input type="button" value="--変 換→" id="btn" class="btn btn-success">&nbsp;
+<input type="button" value="--変 換→" id="btn" onClick="oven_calc()" class="btn btn-success">&nbsp;
 華氏<input readOnly size="10" id="f_txt">°F
 </div>
 

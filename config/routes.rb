@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
-  get 'seasoning_category/index'
+#  get 'seasoning_category/index'
 
-  get 'seasoning_category/show'
+#  get 'seasoning_category/show'
 
   root  'static_pages#home'
   

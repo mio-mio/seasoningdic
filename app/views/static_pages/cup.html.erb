@@ -6,163 +6,82 @@
 <p>
 「牛乳&nbsp;1カップ、砂糖&nbsp;大さじ1杯・・・」なんてフレーズは、料理レシピではとてもよく出てきます。<br>
 ですが、この「1カップ」も「大さじ1杯」も、国が変わると量が変わる可能性があるって知っていましたか?<br>
-日本では200mlである「1カップ」も、アメリカでは約240ml、カナダやオーストラリアでは250ml、イギリスでは280mlと、かなりバラバラ。<br>
-海外のレシピを見て料理するときには、どの国のレシピなのかも意識する必要があるようです。<br>
-ここではアメリカでの換算をご紹介します。
+日本では200mlである「1カップ」も、アメリカでは235ml、カナダやオーストラリアでは250ml、イギリスでは280mlと、かなりバラバラ。<br>
+海外のレシピを見て料理するときには、どの国のレシピなのかも意識する必要がありますね。<br>
 </p>
     
-<script>
-function calc(ptn) { 
-	var value1 = parseInt(document.getElementById('value-1').value); 
-	var value2 = parseInt(document.getElementById('value-2').value); 
-	var total;
-	var strtitle;
-	if(ptn == 1){
-		strtitle = "足し算の計算結果は";
-		total = value1 + value2; 
-	}
-	else if(ptn == 2){
-		strtitle = "引き算の計算結果は";
-		total = value1 - value2; 
-	}
-	else if(ptn == 3){
-		strtitle = "掛け算の計算結果は";
-		total = value1 * value2; 
-	}
-	else if(ptn == 4){
-		strtitle = "割り算の計算結果は";
-		total = value1 / value2; 
-	}
-	alert(strtitle + total); 
-}
-</script> 
-
-<label for="value-1">値1</label>
-<input type="number" id="value-1" />
-<label for="value-2">値2</label>
-<input type="number" id="value-2" />
-<input type="button" value="足し算" onclick="calc(1)" />
-<input type="button" value="引き算" onclick="calc(2)" />
-<input type="button" value="掛け算" onclick="calc(3)" />
-<input type="button" value="割り算" onclick="calc(4)" />
-
-
-<p>
-<script>
-
-function thkw(){
-    
-    $sum = calc(1);    //足し算の計算結果を格納
-    $sub = calc(2);    //引き算算の計算結果を格納
-    $mul = calc(3);    //掛け算の計算結果を格納
-    $div = calc(4);    //割り算の計算結果を格納
-    
-    alert($sum+"\n"+$sub+"\n"+$mul+"\n"+$div);
-    
-}
-function calc(ptn) { 
-    var value1 = parseInt(document.getElementById('value-1').value); 
-    var value2 = parseInt(document.getElementById('value-2').value); 
-    var total;
-    var strtitle;
-    if(ptn == 1){
-        strtitle = "足し算の計算結果は";
-        total = value1 + value2; 
-    }
-    else if(ptn == 2){
-        strtitle = "引き算の計算結果は";
-        total = value1 - value2; 
-    }
-    else if(ptn == 3){
-        strtitle = "掛け算の計算結果は";
-        total = value1 * value2; 
-    }
-    else if(ptn == 4){
-        strtitle = "割り算の計算結果は";
-        total = value1 / value2; 
-    }
-    return strtitle + total;
-}
-</script> 
-<label for="value-1">値1</label>
-<input type="number" id="value-1" />
-<label for="value-2">値2</label>
-<input type="number" id="value-2" />
-<input type="button" value="四則演算" onclick="thkw()" />
-
-
-
-</p>
-
-
 <div>
     <table class="table-striped table-bordered">
-       <tbody><tr>
+      <tbody>
+      <tr>
         <th>
- <select name="city_id" id="city_id">
-  <option value="1">アメリカ</option>
-  <option value="2">イギリス</option>
-  <option value="3">カナダ・オーストラリア</option>
- </select>
+            <%#= options_for_select([['日本', 1], ['アメリカ', 2], ['イギリス', 3], ['カナダ', 4], ['オーストラリア', 5]]) %>
+        <select name="city_id_1" id="city_id_1">
+          <option value="1">日本</option>
+          <option value="2">アメリカ</option>
+          <option value="3">イギリス</option>
+          <option value="4">カナダ</option>
+          <option value="5">オーストラリア</option>
+         </select>
+         </th>
+        <th>
+         <select name="city_id_2" id="city_id_2">
+          <option value="1">日本</option>
+          <option value="2" selected="selected">アメリカ</option>
+          <option value="3">イギリス</option>
+          <option value="4">カナダ</option>
+          <option value="5">オーストラリア</option>
+         </select>
+        </th>
+      </tr>
+      <tr>
+       <td><input type="text" size="5" id="cups_jp"> cups (JP)</td>
+       <td><input type="text" size="5" id="cups"> cups</td>
+       <td><input type="text" size="5" id="cups_fl_oz"> 液量オンス（fl oz）</td>
+       <td><input type="text" size="5" id="cups_pints"> pints</td>
+      <tr>
+       <td></td>
+       <td><input type="text" size="5" id="cups_quarts"> quarts</td>
+       <td><input type="text" size="5" id="cups_milliliters"> cc/mL</td>
+       <td><input type="text" size="5" id="cups_liters"> liters</td>
+      </tr>
 
-</div> 
-  </th>
-        <th>日本</th>
       </tr>
       <tr>
-        <td><input type="text" size="5" id="cups" style="background-color: rgb(255, 255, 255);"> cups</td>
-        <td><input type="text" size="5" id="cups_JP" style="background-color: rgb(255, 255, 255);"> cups (JP)</td>
-      </tr>
-      
-      <tr>
-        <td><input type="text" size="5" id="tablespoons" style="background-color: rgb(255, 255, 255);"> Tbsp</td>
-        <td>大さじ<input type="text" size="5" id="tablespoons_JP" style="background-color: rgb(255, 255, 255);"> 杯(JP)</td>
+        <td>大さじ<input type="text" size="5" id="tablespoons_jp"> 杯(JP)</td>
+        <td><input type="text" size="5" id="tablespoons"> Tbsp</td>
+       <td><input type="text" size="5" id="tablespoons_milliliters"> cc/mL</td>
+       <td><input type="text" size="5" id="tablespoons_liters"> liters</td>
       </tr>
       <tr>
-        <td><input type="text" size="5" id="teaspoons" style="background-color: rgb(255, 255, 255);"> tsp</td>
-        <td>小さじ<input type="text" size="5" id="teaspoons_JP" style="background-color: rgb(255, 255, 255);"> 杯(JP)</td>
+        <td>小さじ<input type="text" size="5" id="teaspoons_jp"> 杯(JP)</td>
+        <td><input type="text" size="5" id="teaspoons"> tsp</td>
+       <td><input type="text" size="5" id="teaspoons_milliliters"> cc/mL</td>
+       <td><input type="text" size="5" id="teaspoons_liters"> liters</td>
       </tr>
       <tr>
-        <td><input type="text" size="5" id="fluid_ounces" style="background-color: rgb(255, 255, 255);"> fl oz</td>
-        <td><input type="text" size="5" id="milliliters" style="background-color: rgb(255, 255, 255);"> cc/mL</td>
+        <td><input type="text" size="5" id="milliliters_jp"> cc/mL</td>
+        <td><input type="text" size="5" id="milliliters_fluid_ounces"> fl oz</td>
+        <td><input type="text" size="5" id="milliliters_pints"> pints</td>
+        <td><input type="text" size="5" id="milliliters_jiggers"> jiggers</td>
+        <td><input type="text" size="5" id="milliliters_gills"> gills</td>
       </tr>
       <tr>
-        <td><input type="text" size="5" id="pints" style="background-color: rgb(255, 255, 255);"> pints</td>
-        <td><input type="text" size="5" id="milliliters" style="background-color: rgb(255, 255, 255);"> cc/mL</td>
+        <td><input type="text" size="5" id="liters"> liters</td>
+        <td><input type="text" size="5" id="liters_quarts"> quarts</td>
+        <td><input type="text" size="5" id="liters_gallons"> gallons</td>
       </tr>
-      <tr>
-        <td><input type="text" size="5" id="quarts" style="background-color: rgb(255, 255, 255);"> quarts</td>
-        <td><input type="text" size="5" id="liters" style="background-color: rgb(255, 255, 255);"> liters</td>
-              </tr>
-      <tr>
-        <td><input type="text" size="5" id="gallons" style="background-color: rgb(255, 255, 255);"> gallons</td>
-        <td><input type="text" size="5" id="liters" style="background-color: rgb(255, 255, 255);"> liters</td>
-              </tr>
-      <tr>
-        <td><input type="text" size="5" id="jiggers" style="background-color: rgb(255, 255, 255);"> jiggers</td>
-        <td><input type="text" size="5" id="milliliters" style="background-color: rgb(255, 255, 255);"> cc/mL</td>
-              </tr>
-      <tr>
-        <td><input type="text" size="5" id="gills" style="background-color: rgb(255, 255, 255);"> gills</td>
-        <td><input type="text" size="5" id="milliliters" style="background-color: rgb(255, 255, 255);"> cc/mL</td>
-      </tr>
-    </tbody></table>
-      
-    <table class="volume_measurements">
-      <tbody><tr>
-        <th colspan="4">Metric</th>
-      </tr>
-      <tr>
-        <td colspan="4"><input type="text" size="5" id="milliliters" style="background-color: rgb(255, 255, 255);"> cc/mL</td>
-      </tr>
-      <tr>
-        <td colspan="4"><input type="text" size="5" id="liters" style="background-color: rgb(255, 255, 255);"> liters</td>
-      </tr>
-    </tbody></table>        
+    </tbody>
+    </table>
       
 </div>
 
     <p id="message" style="margin: 0px; padding: 0px 0px 9px; color: black;"></p>
-    <input id="calculate_button" class="btn btn-success btn-sm" type="button" value="換　算">
+    <input id="calculate_button" class="btn btn-success btn-sm" type="button" value="換　算" onClick="calculate()" >
     <input id="toggle_button" class="btn btn-success btn-sm" type="button" value="分数表示に変換" disabled="">
     <input id="clear_button" class="btn btn-default btn-sm" style="color: #FFFFFF; background: #2A120A;" type="reset" value="リセット">
+    
+
+    <br><br>
+
+    
