@@ -1,0 +1,6 @@
+<% provide(:title, 'カテゴリ検索') %>
+
+
+<% @seasoning_categories.each do |seasoning_category| %>
+<%= link_to seasoning_category.title, seasoning_recipes_category_search_path(id: seasoning_category.id) %>
+<% end %>
