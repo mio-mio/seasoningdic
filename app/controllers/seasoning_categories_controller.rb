@@ -1,4 +1,4 @@
-class SeasoningCategoryController < ApplicationController
+class SeasoningCategoriesController < ApplicationController
   def index
     @seasoning_categories = SeasoningCategory.all
   end
@@ -10,7 +10,7 @@ class SeasoningCategoryController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     #def set_show
-    #  @seasoning_category = SeasoningCategory.find(params[:id])
+    #  @seasoning_categories = SeasoningCategory.find(params[:id])
     #end
 
     # Never trust parameters from the scary internet, only allow the white list through.

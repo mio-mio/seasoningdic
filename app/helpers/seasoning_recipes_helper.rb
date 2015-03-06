@@ -1,0 +1,2 @@
+module SeasoningRecipesHelper
+end

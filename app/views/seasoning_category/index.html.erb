@@ -1,7 +1,0 @@
-<% provide(:title, 'カテゴリ検索') %>
-
-<p>カテゴリを選んでください</p>
-
-<% @seasoning_categories.each do |seasoning_category| %>
- <li><%= link_to seasoning_category.title,  seasoning_category_show_path %></li>
-<% end %>
